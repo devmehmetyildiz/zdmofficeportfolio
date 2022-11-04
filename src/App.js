@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './Pages/Common/Header';
@@ -10,18 +10,23 @@ import ProjectDetail from "./Pages/ProjectDetail"
 import Contact from "./Pages/Contact"
 
 export function App() {
+
+  const [showBody, setshowBody] = useState(false)
+
   return (
     <React.Fragment>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Portfolio} />
-        <Route exact path="/AboutUs" component={Aboutus} />
-        <Route exact path="/Projects" component={Projects} />
-        <Route exact path="/Projects/:ID" component={ProjectDetail} />
-        <Route exact path="/Contacts" component={Contact} />
-        <Redirect to="/" />
-      </Switch>
-      <Footer />
+      {showBody ? <Header /> : setshowBody}
+     
+        <Switch>
+          <Route exact path="/" render={(props) => <Portfolio {...props} bodyfunc={setshowBody} authed={true} />} />
+          <Route exact path="/AboutUs" render={(props) => <Aboutus {...props} bodyfunc={setshowBody} authed={true} />} />
+          <Route exact path="/Projects" render={(props) => <Projects {...props} bodyfunc={setshowBody} authed={true} />} />
+          <Route exact path="/Projects/:ID" render={(props) => <ProjectDetail {...props} bodyfunc={setshowBody} authed={true} />} />
+          <Route exact path="/Contacts" render={(props) => <Contact {...props} bodyfunc={setshowBody} authed={true} />} />
+          <Redirect to="/" />
+        </Switch>
+     
+      {showBody ? <Footer /> : setshowBody}
     </React.Fragment>
   )
 }

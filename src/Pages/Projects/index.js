@@ -1,12 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import ThreeDotsWave from '../Common/ThreeDotsWave'
 import Project from './Projects'
 import Title from "./Title"
+import { motion } from 'framer-motion'
 
-export default function index() {
-    return (
-      <React.Fragment>
-        <Title />
-        <Project />
-      </React.Fragment>
-    )
+export default function Index(props) {
+  const { bodyfunc } = props
+  const [PageOpened, setPageOpened] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    setTimeout(() => {
+      setPageOpened(true)
+      bodyfunc(true)
+    }, 2000);
+  }, [])
+  return (
+    <React.Fragment>
+      {PageOpened ?
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 2 }}
+        >
+          <Title />
+          <Project />
+        </motion.div>
+        : <ThreeDotsWave />
+      }
+    </React.Fragment >
+  )
 }

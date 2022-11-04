@@ -6,7 +6,7 @@ export default function About() {
     <div className='w-[100%] lg:w-[60%] mx-auto flex flex-col justify-center items-center '>
       <h1 className='text-[1.6875em]  mx-auto lg:w-1/3 text-center whitespace-nowrap mt-12 font-Common tracking-[0.32em] text-[#3d3d3d] font-semibold'>ZDM NE<span className='text-[#c5a47e]'>LER YAPIYOR?</span></h1>
       <div className='flex flex-col mt-6  lg:flex-row justify-center items-center'>
-        <div className='flex flex-col w-1/2 lg:w-1/3 justify-center items-center'>
+        <div className='flex flex-col w-2/3 md:w-1/2 lg:w-1/3 justify-center items-center'>
           <h2 className='leading-[1.1] font-Common font-bold text-[#3d3d3d] text-[1.8em]'>düşüncelerinizi sanatsal projelere çeviriyoruz<span className='text-[#c5a47e]'>.</span></h2>
           <p className='mt-4 text-[1em] leading-[1.65] text-[#747474]'>Çalıştığımız her bir projede, sizlerin fikirlerine tecrübemizi
           ekleyerek çalışma ortamınıza değer katacak ürün kalitesini sunmak için uzman tasarım ekibimizle her zaman hizmetinizdeyiz.
@@ -15,7 +15,7 @@ export default function About() {
           sahip olduğumuz tecrübe ile devam ediyoruz.
          </p>
         </div>
-        <div className='flex flex-col w-1/2 lg:w-1/3 justify-center items-center px-8'>
+        <div className='flex flex-col w-1/2 lg:w-1/3 text-center justify-center items-center px-8'>
           <h2 className='leading-[1.1] w-[100%] text-center font-Common font-bold text-[#3d3d3d] text-[1.8em] mt-4 lg:mt-0'>uzmanlık alanlarımız</h2>
           <div className='mt-4 flex flex-col justify-center items-center'>
             <img className='mb-4 w-1/4 py-2' src={img.iconArchitecture} alt="" />
