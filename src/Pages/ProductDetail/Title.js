@@ -25,17 +25,17 @@ export function Title({ history }) {
                 </div>
             </div>
             <div className='top-[22vmin]  text-[#fff] w-1/3 absolute  right-[2vmin] md:right-[10vmin] lg:right-[25vmin] flex flex-col justify-center items-center'>
-                <h1 className='sm:text-lg md:text-xl lg:text-6xl text-right tracking-widest leading-[1.3em]'>Proje Detayları </h1>
+                <h1 className='sm:text-lg md:text-xl lg:text-6xl text-right tracking-widest leading-[1.3em]'>Ürün Detay</h1>
             </div>
             <div className='h-[60vh] w-[19.735vmin] z-30  absolute left-0 top-0 bg-[#f6f5f3]'>
                 <div className='flex flex-col justify-center items-center bottom-0 z-10   absolute left-0 w-[100%]'>
                     <div className='h-[5vmin] mt-[3.8vmin] w-[1px] bg-[#c5c4c2]' />
-                    <AiOutlineLinkedin className='hover:text-[#c5a47e] transition-all ease-in-out duration-300 cursor-pointer text-[2.4vmin] text-[#c5c4c2] mt-[3.8vmin]' />
+                    <CgFacebook className=' hover:text-[#c5a47e] transition-all ease-in-out duration-300 cursor-pointer text-[2.4vmin] text-[#c5c4c2] mt-[3.8vmin]' />
                     <CgInstagram className='hover:text-[#c5a47e] transition-all ease-in-out duration-300 cursor-pointer text-[2.4vmin] text-[#c5c4c2] mt-[3.8vmin] ' />
-                    <CgFacebook className='mb-4 hover:text-[#c5a47e] transition-all ease-in-out duration-300 cursor-pointer text-[2.4vmin] text-[#c5c4c2] mt-[3.8vmin]' />
+                    <AiOutlineLinkedin className='mb-4 hover:text-[#c5a47e] transition-all ease-in-out duration-300 cursor-pointer text-[2.4vmin] text-[#c5c4c2] mt-[3.8vmin]' />
                 </div>
             </div>
-            <img className='w-[100vw]  h-[60vh] left-0 top-0 z-10 bg-repeat' src={img.projects} alt=""></img>
+            <div className='bg-[#747474] w-[100vw]  h-[60vh] left-0 top-0 z-10 ' />
         </div>
     )
 }

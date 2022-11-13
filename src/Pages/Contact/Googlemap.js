@@ -15,34 +15,35 @@ export default function googlemap() {
         aria-hidden="false"
         tabIndex="0"
       />
-      <div className='w-1/2 text-white font-Common bg-[#c5a47df2] h-[500px] flex flex-col justfy-center items-start'>
+      <div className='w-full lg:w-1/2 text-white font-Common bg-[#c5a47df2] h-[500px] flex flex-col justfy-center items-start'>
         <div className='flex flex-col justfy-start tracking-widest items-start p-8'>
           <div className='w-full  flex text-2xl flex-row justify-start mb-4 items-center'>
-            <AiFillPhone className='mr-4'/>
-            <h1>PHONE</h1>
+            <AiFillPhone className='mr-4' />
+            <h1>Telefon</h1>
           </div>
           <div className='text-lg'>
-            <h1>+ 0 543 554 44-25</h1>
-            <h1>+ 0 543 554 44-25</h1>
-            <h1>+ 0 543 554 44-25</h1>
+            <h1>+ 0 532 690 78-55</h1>
           </div>
         </div>
         <div className='flex flex-col justfy-start items-start tracking-widest p-8'>
           <div className='w-full text-2xl  flex flex-row justify-start mb-4 items-center'>
-            <FiMail className='mr-4'/>
+            <FiMail className='mr-4' />
             <h1>EMAIL</h1>
           </div>
-          <h1 className='text-lg'>goarch@domin.com</h1>
+          <h1 className='text-lg'>info@zdmofis.com.tr</h1>
+          <h1 className='text-lg'>pazarlama@zdmofis.com.tr</h1>
         </div>
         <div className='flex flex-col justfy-start tracking-widest items-start p-8'>
           <div className='w-full flex text-2xl flex-row justify-start mb-4 items-center'>
-            <FaMapMarkerAlt className='mr-4'/>
-            <h1>ADDRESS</h1>
+            <FaMapMarkerAlt className='mr-4' />
+            <h1>Adres</h1>
           </div>
-         <div className='text-lg'>
-         <h1>USA, New York,</h1>
-          <h1>648 Ivah Street Apt. 375</h1>
-         </div>
+          <div className='text-lg'>
+            <h1>Şehit Abdullah Çavuş Mahallesi</h1>
+            <h1>Adil Erdem Beyazıt Caddesi</h1>
+            <h1>NO: 139 / A  46100 </h1>
+            <h1>Onikişubat/Kahramanmaraş</h1>
+          </div>
         </div>
       </div>
     </div>

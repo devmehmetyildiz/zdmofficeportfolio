@@ -4,7 +4,7 @@ import img from '../../assets/img'
 export default function About() {
   return (
     <div className='w-[100%] lg:w-[60%] mx-auto flex flex-col justify-center items-center '>
-      <h1 className='text-[1.6875em]  mx-auto lg:w-1/3 text-center whitespace-nowrap mt-12 font-Common tracking-[0.32em] text-[#3d3d3d] font-semibold'>ZDM NE<span className='text-[#c5a47e]'>LER YAPIYOR?</span></h1>
+      <h1 className='text-[1.0875em] lg:text-[1.6875em]  mx-auto lg:w-1/3 text-center whitespace-nowrap mt-12 font-Common tracking-[0.32em] text-[#3d3d3d] font-semibold'>ZDM NE<span className='text-[#c5a47e]'>LER YAPIYOR?</span></h1>
       <div className='flex flex-col mt-6  lg:flex-row justify-center items-center'>
         <div className='flex flex-col w-2/3 md:w-1/2 lg:w-1/3 justify-center items-center'>
           <h2 className='leading-[1.1] font-Common font-bold text-[#3d3d3d] text-[1.8em]'>düşüncelerinizi sanatsal projelere çeviriyoruz<span className='text-[#c5a47e]'>.</span></h2>

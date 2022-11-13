@@ -14,13 +14,13 @@ export function Title({ history }) {
                     ofis
                 </a>
             </div>
-            <div className='absolute lg:left-[25%] md:left-[35%] sm:left-[45%] top-[14vmin] w-[60%] flex flex-row justify-between items-center'>
+            <div className='hidden md:hidden lg:visible absolute lg:left-[25%] md:left-[35%] sm:left-[45%] top-[14vmin] w-[60%] lg:flex flex-row justify-between items-center'>
                 <p className='font-Common font-light text-[0.75em] tracking-[0.22em] text-[#fff]'>0532 690 78 55</p>
                 <div className=' sm:hidden md:hidden lg:flex flex-row justify-center items-center  font-light text-[0.75em]  cursor-pointer tracking-[0.22em]'>
                     <a className='text-[#fff] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/') }}>ANA SAYFA</a>
                     <a className='text-[#fff] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/AboutUs') }}>BİZ KİMİZ?</a>
                     <a className='text-[#fff] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/Projects') }}>PROJELERİMİZ</a>
-                    <a className='text-[#fff] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/') }}>ÜRÜNLERİMİZ</a>
+                    <a className='text-[#fff] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/Products') }}>ÜRÜNLERİMİZ</a>
                     <a className='text-[#fff] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/Contacts') }}>İLETİŞİM</a>
                 </div>
             </div>

@@ -5,8 +5,6 @@ import img from '../../assets/img'
 export function Detail({ match, history }) {
 
     const ID = match.params.ID
-    console.log('match.params.Id: ', match.params.ID);
-    console.log('match: ', match);
 
     if (!ID || ID > 9 || ID < 1) {
         history.push("/Projects")
@@ -81,27 +79,24 @@ export function Detail({ match, history }) {
         },
     ]
 
-    const Renderitem = items.find(item => item.Id==ID)
+    const Renderitem = items.find(item => item.Id == ID)
     return (
-        <div className='w-full mt-12 px-[20%] relative'>
-                <div className='absolute z-100 left-[10%] top-[40%]'>
-                    <div className='w-[50%]  bg-[#c5a47e] flex flex-col justify-center items-start p-20'>
-                        <h2 className='font-bold font-Common text-[1.4em] lg:text-[1.9em] leading-[1.5] uppercase text-[#fff]'>{Renderitem.title}#{ID}</h2>
-                        <div className='whitespace-nowrap flex flex-col lg:flex-row justify-center lg:justify-between w-full items-start lg:items-center'>
-                            <h2 className='font-bold font-Common text-[1.4em] lg:text-[1.9em] leading-[1.5] uppercase text-[#fff] lg:my-4'>Client : {Renderitem.client}</h2>
-                            <h2 className='font-bold font-Common text-[1.4em] lg:text-[1.9em] leading-[1.5] uppercase text-[#fff] lg:my-4'>Scale : {Renderitem.Scale}</h2>
-                        </div>
-                        <p className='text-[1.1em] text-[#fff] leading-[1.62]'>
-                            {Renderitem.text}
-                        </p>
+        <div className='w-full mt-12 px-[10%] relative'>
+            <div className='absolute z-100 left-[20vmin] top-[40%]'>
+                <div className='w-[50%]  bg-[#c5a47e] flex flex-col justify-center items-start p-4 lg:p-20'>
+                    <h2 className='font-bold font-Common text-[3.5vmin]  leading-[1.5] uppercase text-[#fff]'>{Renderitem.title}#{ID}</h2>
+                    <div className=' flex flex-col lg:flex-row justify-center lg:justify-between w-full items-start lg:items-center'>
+                        <h2 className='font-bold font-Common text-[3.5vmin] leading-[1.5] uppercase text-[#fff] lg:my-4'>Client : {Renderitem.client}</h2>
+                        <h2 className='font-bold font-Common text-[3.5vmin]  leading-[1.5] uppercase text-[#fff] lg:my-4'>Scale : {Renderitem.Scale}</h2>
                     </div>
+                    <p className='text-[2.7vmin]  text-[#fff] leading-[1.62]'>
+                        {Renderitem.text}
+                    </p>
                 </div>
-                <div className='flex justify-center items-end'>
-                    <img className='' src={Renderitem.img} alt="" />
-                </div>
-                <div className='bottom-0 right-0'>
-
-                </div>
+            </div>
+            <div className='flex justify-center items-end'>
+                <img className='' src={Renderitem.img} alt="" />
+            </div>
         </div>
     )
 }

@@ -25,7 +25,7 @@ export default function Index(props) {
                     transition={{ ease: "easeOut", duration: 2 }}
                 >
                     <Title />
-                    <Detail />
+                    <Detail  {...props} />
                 </motion.div>
                 : <ThreeDotsWave />
             }
