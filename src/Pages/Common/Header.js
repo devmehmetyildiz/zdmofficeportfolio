@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import { withRouter } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import "./Header.css"
 export function Header({ history }) {
 
     const [togglemenu, setTogglemenu] = useState(false);

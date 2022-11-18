@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Map from "./Map"
 import Googlemap from "./Googlemap"
-import Title from './Title'
+import Title from '../Common/Title'
 import ThreeDotsWave from '../Common/ThreeDotsWave'
 import { motion } from 'framer-motion'
+import img from '../../assets/img'
 
 export default function Index(props) {
     const { bodyfunc } = props
@@ -24,7 +25,7 @@ export default function Index(props) {
                     animate={{ opacity: 1 }}
                     transition={{ ease: "easeOut", duration: 2 }}
                 >
-                    <Title />
+                    <Title bg={img.Contact} title={"İletişim"} isImg={true} />
                     <Googlemap />
                     <Map />
                 </motion.div>

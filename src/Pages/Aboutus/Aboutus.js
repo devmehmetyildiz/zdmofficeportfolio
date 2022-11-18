@@ -3,7 +3,7 @@ import React from 'react'
 export default function aboutus() {
   return (
     <div className='mt-20 w-full px-[25%] flex flex-col justify-center items-center'>
-      <h2 className='leading-[1.1] font-Common font-bold text-[#3d3d3d] text-[2.2em] lg:text-[3.6em] text text-center'>düşüncelerinizi sanatsal projelere çeviriyoruz<span className='text-[#c5a47e]'>.</span></h2>
+      <h2 className='leading-[1.1] font-Common font-bold text-[#3d3d3d] text-[2.2em] lg:text-[3.6em] text text-center'>Düşüncelerinizi sanatsal projelere çeviriyoruz<span className='text-[#c5a47e]'>.</span></h2>
       <p className='mt-8 text-[4vmin] lg:text-[1.6em] text-center tracking-wide leading-[1.6] text-[#747474] font-Common'>
         Çalıştığımız her bir projede, sizlerin fikirlerine tecrübemizi
         ekleyerek çalışma ortamınıza değer katacak ürün kalitesini

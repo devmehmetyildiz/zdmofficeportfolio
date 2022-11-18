@@ -52,7 +52,6 @@ export default function ThreeDotsWave() {
         variants={loadingContainerVariants}
         initial="start"
         animate="end"
-
       >
         <motion.span
           style={loadingCircle}

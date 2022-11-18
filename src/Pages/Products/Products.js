@@ -103,18 +103,20 @@ export const Products = (props) => {
           </div>
         }) : null}
       </div >
-      <div className='mt-12 grid grid-col-2 md:grid-col-3 lg:grid-cols-4  mx-auto px-[10%]'>
+      <div className='mt-12 grid grid-col-2 md:grid-col-3 lg:grid-cols-4 gap-4 mx-auto px-[10%]'>
         {list.slice((selectedpageindex - 1) * 10, selectedpageindex * 10).map(item => {
-          return <div key={item.uuid} className='overflow-hidden flex flex-col justify-center items-center  group scale-75 shadow-lg relative' >
+          return <div key={item.uuid} className='overflow-hidden flex flex-col justify-start items-center  group  shadow-lg relative' >
             <div className='text-center align-top mt-3 text-[#747474]'>
               {item.name}
             </div>
-            <img className=' group-hover:opacity-70 group-hover:rotate-3 transition-all ease-in-out duration-300 scale-75 group-hover:scale-100' src={`${process.env.REACT_APP_BACKEND_URL}/${ROUTES.PRODUCTS}/GetImage?guid=${item.products[0].uuid}`} />
+            <div className='w-full h-full flex justify-center items-center'>
+              <img className=' group-hover:opacity-70 group-hover:rotate-3 transition-all ease-in-out duration-300 scale-75 w-[60%] h-auto group-hover:scale-100' src={`${process.env.REACT_APP_BACKEND_URL}/${ROUTES.PRODUCTS}/GetImage?guid=${item.products[0].uuid}`} />
+            </div>
             <BiSearchAlt onClick={() => { history.push(`Products/${item.uuid}`) }} style={{ transform: 'translate(-50%,-50%)' }} className='text-[#747474] opacity-60 cursor-pointer  text-[0px] group-hover:text-[50px] transition-all ease-in-out duration-300 rounded-full absolute left-[50%] top-[50%]' ></BiSearchAlt>
           </div>
         })}
       </div>
-      <div className='flex flex-row flex-nowrap justify-start items-start mx-auto'>
+      <div className='mt-4 flex flex-row flex-nowrap justify-start items-start mx-auto'>
         {numbers.map(item => {
           return <div key={item} onClick={() => { setSelectedpageindex(item) }} className={`${item === selectedpageindex ? `bg-gray-700` : `bg-gray-300`} mx-2 p-4 cursor-pointer`}>
             <span className={`${item === selectedpageindex ? `text-white` : `text-white`}`}>{item}</span>

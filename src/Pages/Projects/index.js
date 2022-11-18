@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ThreeDotsWave from '../Common/ThreeDotsWave'
-import Project from './Projects'
-import Title from "./Title"
+import Title from '../Common/Title'
+import Project from "./Projects"
 import { motion } from 'framer-motion'
+import img from '../../assets/img'
 
 export default function Index(props) {
   const { bodyfunc } = props
@@ -23,7 +24,7 @@ export default function Index(props) {
           animate={{ opacity: 1 }}
           transition={{ ease: "easeOut", duration: 2 }}
         >
-          <Title />
+          <Title bg={img.projects} title={"Projelerimiz"} isImg={true} />
           <Project />
         </motion.div>
         : <ThreeDotsWave />
