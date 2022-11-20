@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { SetLogin } from "../../Redux/actions/LoginAction"
-import { GetAllCategories, GetAllCompanies, GetAllProductgroups, GetAllSubcategories, GetSelectedProductgroups, Removecategory, Removesubcategory } from "../../Redux/actions/ApiAction"
+import { GetAllCategories, GetAllCompanies, GetAllProductgroups, GetAllSubcategories, GetSelectedProductgroups, Removecategory, Removesubcategory, Setcategory, Setsubcategory } from "../../Redux/actions/ApiAction"
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { ROUTES } from '../../Utils/Constants'
@@ -39,9 +39,22 @@ export const Products = (props) => {
   const { history } = props
   const { categorieslist, subcategorieslist, companieslist, productgrouplist } = props.Datas
   let list = productgrouplist
-
+  let templist = []
   Object.keys(selectedCategories).length > 0 ? list = list.filter(u => u.categoryuuid === selectedCategories.uuid) : list = list
-  Object.keys(selectedSubcategories).length > 0 ? list = list.filter(u => u.subcategoryuuid === selectedSubcategories.uuid) : list = list
+  if (Object.keys(selectedSubcategories).length > 0) {
+    list.forEach(element => {
+      let addit = false
+      element.products.forEach(product => {
+        if (product.subcategoryuuid === selectedSubcategories.uuid) {
+          addit = true
+        }
+      });
+      if (addit) {
+        templist.push(element)
+      }
+    })
+    list = templist
+  }
   selectedfilter !== '' ? list = list.filter(u => u.name.toUpperCase() === selectedfilter.toUpperCase()) : list = list
 
   let numbers = []
@@ -66,7 +79,6 @@ export const Products = (props) => {
     }
   }
 
-  console.log('selectedCategories: ', selectedCategories);
   return (
     <div className='w-full mt-12 px-[10%] flex flex-col justify-center items-center'>
       <div className='flex my-8 flex-row w-1/5 flex-nowrap justify-center items-center'>
@@ -105,14 +117,20 @@ export const Products = (props) => {
       </div >
       <div className='mt-12 grid grid-col-2 md:grid-col-3 lg:grid-cols-4 gap-4 mx-auto px-[10%]'>
         {list.slice((selectedpageindex - 1) * 10, selectedpageindex * 10).map(item => {
-          return <div key={item.uuid} className='overflow-hidden flex flex-col justify-start items-center  group  shadow-lg relative' >
+          return <div key={item.uuid} className=' overflow-hidden flex flex-col justify-start items-center  group  shadow-lg relative' >
             <div className='text-center align-top mt-3 text-[#747474]'>
               {item.name}
             </div>
             <div className='w-full h-full flex justify-center items-center'>
-              <img className=' group-hover:opacity-70 group-hover:rotate-3 transition-all ease-in-out duration-300 scale-75 w-[60%] h-auto group-hover:scale-100' src={`${process.env.REACT_APP_BACKEND_URL}/${ROUTES.PRODUCTS}/GetImage?guid=${item.products[0].uuid}`} />
+              <img
+                className='group-hover:opacity-70  transition-all ease-in-out duration-300 scale-75 w-[60%] h-auto group-hover:scale-100'
+                src={`${process.env.REACT_APP_BACKEND_URL}/${ROUTES.PRODUCTS}/GetImage?guid=${Object.keys(selectedSubcategories).length > 0 ? item.products.filter(u => u.subcategoryuuid === selectedSubcategories.uuid)[0].uuid : item.products[0].uuid}`} />
             </div>
-            <BiSearchAlt onClick={() => { history.push(`Products/${item.uuid}`) }} style={{ transform: 'translate(-50%,-50%)' }} className='text-[#747474] opacity-60 cursor-pointer  text-[0px] group-hover:text-[50px] transition-all ease-in-out duration-300 rounded-full absolute left-[50%] top-[50%]' ></BiSearchAlt>
+            <BiSearchAlt onClick={() => {
+              props.Setcategory(selectedCategories)
+              props.Setsubcategory(selectedSubcategories)
+              history.push(`/Products/${item.uuid}`)
+            }} style={{ transform: 'translate(-50%,-50%)' }} className='text-[#747474] opacity-60 cursor-pointer  text-[0px] group-hover:text-[50px] transition-all ease-in-out duration-300 rounded-full absolute left-[50%] top-[50%]' ></BiSearchAlt>
           </div>
         })}
       </div>
@@ -131,6 +149,6 @@ const mapStateToProps = (state) => ({
   Datas: state.Datas
 })
 
-const mapDispatchToProps = { GetAllCategories, GetAllCompanies, GetAllProductgroups, GetAllSubcategories, GetSelectedProductgroups, SetLogin, Removecategory, Removesubcategory }
+const mapDispatchToProps = { GetAllCategories, GetAllCompanies, GetAllProductgroups, GetAllSubcategories, GetSelectedProductgroups, SetLogin, Removecategory, Removesubcategory, Setcategory, Setsubcategory }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Products))

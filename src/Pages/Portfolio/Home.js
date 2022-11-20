@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import img from "../../assets/img"
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +7,7 @@ import { AiOutlineLinkedin } from 'react-icons/ai';
 import { withRouter } from 'react-router-dom';
 export function Home({ history }) {
 
+  const [imageloaded, setimageloaded] = useState(false)
 
   return (
     <div className='relative z-0 h-auto'>
@@ -22,7 +23,7 @@ export function Home({ history }) {
           <span className='text-[#3d3d3d] tracking-widest leading-non text-[2vmin] align-top'>01</span>
         </div>
       </div>
-     {/*  <div className='top-[44vmin] absolute left-[25vmin] flex flex-row justify-center items-center'>
+      {/*  <div className='top-[44vmin] absolute left-[25vmin] flex flex-row justify-center items-center'>
         <div className='flex flex-row justify-center items-center hover:text-[#c5a47e] text-[#3d3d3d] transition-all ease-in-out duration-300 cursor-pointer'>
           <FontAwesomeIcon className=' text-[2.4vmin]  mr-[5px] opacity-25' icon={faArrowLeft} />
           <p className=' text-[1em]  font-Common tracking-[0.32em]  mr-[4vmin]'>GERİ</p>
@@ -64,7 +65,8 @@ export function Home({ history }) {
           <a className='cursor-pointer text-[#3d3d3d] mr-[8vmin] hover:text-[#c5a47e] font-Common' onClick={() => { history.push('/Contacts') }}>İLETİŞİM</a>
         </div>
       </div>
-      <img className='w-[100vw]  h-[100vh] left-0 top-0 z-10 object-cover' src={img.slide1} alt=""></img>
+      <img className={`w-[100vw]  h-[100vh] left-0 top-0 z-10 object-cover ${imageloaded ? {} : 'hidden'}`} src={img.slide1} onLoad={() => setimageloaded(true)} alt=""></img>
+      <div className={`bg-gradient-to-r from-[#3d3d3d] to-[#6e6355] w-full  h-[100vh] left-0  top-0 z-10 ${imageloaded ? 'hidden' : {}}`} />
     </div>
   )
 }

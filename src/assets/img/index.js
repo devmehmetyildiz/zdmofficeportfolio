@@ -26,6 +26,7 @@ import Aboutus from "./Aboutus.jpg"
 import map from "./map.png"
 import projects from "./Projects.jpg"
 import Contact from "./Contact.jpg"
+import mebtrans from "./mebtrans.png"
 export default {
     bg,
     client1,
@@ -54,5 +55,6 @@ export default {
     Aboutus,
     map,
     projects,
-    Contact
+    Contact,
+    mebtrans
 }

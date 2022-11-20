@@ -5,16 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Clients() {
 
   const clients = [
-    img.client1,
-    img.client2,
-    img.client3,
-    img.client4,
-    img.client5,
-    img.client1,
-    img.client2,
-    img.client3,
-    img.client4,
-    img.client5,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
+    img.mebtrans,
   ]
 
   return (

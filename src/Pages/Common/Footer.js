@@ -35,7 +35,7 @@ export default function Footer() {
           <FontAwesomeIcon className=' text-[#fff] text-[2.4vmin]  mr-[2vmin] opacity-25 ml-2' icon={faArrowRight} />
         </button>
       </div>
-      <div className='flex my-12 flex-row justify-between items-center w-[100%] lg:px-[23%]'>
+      <div className='flex my-12 flex-col lg:flex-row  justify-between items-center w-[100%] lg:px-[23%]'>
         <a className='font-Common font-bold cursor-pointer text-[4vmin] line-none text-[#3d3d3d]'>
           zdm
           <span className='text-[#c5a47e]'>.</span>
