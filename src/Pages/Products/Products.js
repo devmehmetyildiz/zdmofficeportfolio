@@ -13,7 +13,7 @@ export const Products = (props) => {
   const [selectedfilter, setselectedfilter] = useState("")
   const [selectedCategories, setselectedCategories] = useState({})
   const [selectedSubcategories, setselectedSubcategories] = useState({})
-  const paginationmaxnumber = 10
+  const paginationmaxnumber = 12
 
   useEffect(() => {
     props.GetAllCategories()
@@ -93,10 +93,10 @@ export const Products = (props) => {
           </input>
         </div>
       </div>
-      <div className='mt-4 flex flex-row justify-center items-center text-center flex-wrap'>
+      <div className='mt-4 text-[110%] flex flex-row justify-center items-center text-center flex-wrap  font-Common'>
         {categorieslist.map(item => {
           return <div key={item.uuid}>
-            <div className={`${selectedCategories.uuid === item.uuid ? 'bg-black text-white' : null} mx-2 rounded-full p-2 text-[#747474] cursor-pointer hover:bg-black hover:text-white transition-all ease-in-out duration-300`}
+            <div className={`${selectedCategories.uuid === item.uuid ? 'bg-[#c5a47e] text-[#3d3d3d]' : 'text-[#bdbdbd]  bg-[#3d3d3d]'} mx-2 my-2 rounded-full px-4 py-2  cursor-pointer hover:bg-[#c5a47e] hover:text-[#3d3d3d] transition-all ease-in-out duration-300`}
               onClick={() => { Setcategories(item) }}
             >
               <h1 >{item.name}</h1>
@@ -104,10 +104,10 @@ export const Products = (props) => {
           </div>
         })}
       </div>
-      <div className='mt-4 flex flex-row justify-center items-center text-center text-sm flex-wrap'>
+      <div className='mt-4 text-[100%] flex flex-row justify-center items-center text-center flex-wrap  font-Common'>
         {selectedCategories && Object.keys(selectedCategories).length > 0 ? subcategorieslist.filter(u => u.categoryuui === selectedCategories.uuid).map(item => {
           return <div key={item.uuid}>
-            < div className={`${selectedSubcategories.uuid === item.uuid ? 'bg-black text-white' : null} mx-2 rounded-full p-2 text-[#747474] cursor-pointer hover:bg-black hover:text-white transition-all ease-in-out duration-300`}
+            < div className={`${selectedSubcategories.uuid === item.uuid ? 'bg-[#c5a47e] text-[#3d3d3d]' : 'text-[#bdbdbd]  bg-[#3d3d3d]'} mx-2 my-2 rounded-full px-4 py-2  cursor-pointer hover:bg-[#c5a47e] hover:text-[#3d3d3d] transition-all ease-in-out duration-300`}
               onClick={() => { Setsubcategories(item) }}
             >
               <h1 >{item.name}</h1>
@@ -115,29 +115,30 @@ export const Products = (props) => {
           </div>
         }) : null}
       </div >
-      <div className='mt-12 grid grid-col-2 md:grid-col-3 lg:grid-cols-4 gap-4 mx-auto px-[10%]'>
-        {list.slice((selectedpageindex - 1) * 10, selectedpageindex * 10).map(item => {
-          return <div key={item.uuid} className=' overflow-hidden flex flex-col justify-start items-center  group  shadow-lg relative' >
-            <div className='text-center align-top mt-3 text-[#747474]'>
-              {item.name}
-            </div>
-            <div className='w-full h-full flex justify-center items-center'>
-              <img
-                className='group-hover:opacity-70  transition-all ease-in-out duration-300 scale-75 w-[60%] h-auto group-hover:scale-100'
-                src={`${process.env.REACT_APP_BACKEND_URL}/${ROUTES.PRODUCTS}/GetImage?guid=${Object.keys(selectedSubcategories).length > 0 ? item.products.filter(u => u.subcategoryuuid === selectedSubcategories.uuid)[0].uuid : item.products[0].uuid}`} />
-            </div>
-            <BiSearchAlt onClick={() => {
+      <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-2 lg:gap-4 mx-auto px-[1%] md:px-[2%] lg:px-[5%]'>
+        {list.slice((selectedpageindex - 1) * paginationmaxnumber, selectedpageindex * paginationmaxnumber).map(item => {
+          return <div
+            onClick={() => {
               props.Setcategory(selectedCategories)
               props.Setsubcategory(selectedSubcategories)
               history.push(`/Products/${item.uuid}`)
-            }} style={{ transform: 'translate(-50%,-50%)' }} className='text-[#747474] opacity-60 cursor-pointer  text-[0px] group-hover:text-[50px] transition-all ease-in-out duration-300 rounded-full absolute left-[50%] top-[50%]' ></BiSearchAlt>
+            }}
+            key={item.uuid} className='cursor-pointer overflow-hidden flex flex-col  justify-start items-center  group  shadow-xl relative  h-[500px]' >
+            <div className='transition-all ease-in-out duration-700  text-center text-[150%] align-top py-4 text-[#bdbdbd] bg-[#3d3d3d] group-hover:bg-[#c5a47e] w-full'>
+              <p className='transition-all ease-in-out duration-700  group-hover:text-[#3d3d3d] font-bold'> {item.name}</p>
+            </div>
+            <div className='w-full h-full flex justify-center items-center'>
+              <img
+                className='  transition-all ease-in-out duration-300 scale-75 w-[80%] h-auto group-hover:scale-100'
+                src={`${process.env.REACT_APP_BACKEND_URL}/${ROUTES.PRODUCTS}/GetImage?guid=${Object.keys(selectedSubcategories).length > 0 ? item.products.filter(u => u.subcategoryuuid === selectedSubcategories.uuid)[0].uuid : item.products[0].uuid}`} />
+            </div>
           </div>
         })}
       </div>
-      <div className='mt-4 flex flex-row flex-nowrap justify-start items-start mx-auto'>
+      <div className='mt-4 font-bold flex flex-row flex-nowrap justify-start items-start mx-auto text-[150%]'>
         {numbers.map(item => {
-          return <div key={item} onClick={() => { setSelectedpageindex(item) }} className={`${item === selectedpageindex ? `bg-gray-700` : `bg-gray-300`} mx-2 p-4 cursor-pointer`}>
-            <span className={`${item === selectedpageindex ? `text-white` : `text-white`}`}>{item}</span>
+          return <div key={item} onClick={() => { setSelectedpageindex(item) }} className={`${item === selectedpageindex ? `bg-[#c5a47e]` : `bg-[#3d3d3d]`} mx-2 p-4 cursor-pointer`}>
+            <span className={`${item === selectedpageindex ? `text-[#3d3d3d]` : `text-[#bdbdbd]`}`}>{item}</span>
           </div>
         })}
       </div>
