@@ -37,23 +37,23 @@ export function Header({ history }) {
                         transition={{ duration: 1.2 }}
                         className={` w-[100%] bg-white px-[18%] mx-auto flex ${showmenu ? 'h-[100vh] flex-col justify-center ' : 'flex-row  justify-between'}  items-center top-0 z-10 fixed`}>
                         <div className='p-2 flex flex-row flex-nowrap' >
-                            <a className='font-Common font-bold text-[4vmin] line-none text-[#3d3d3d] '>
+                            <a className='font-Common font-bold text-[4vmin] line-none text-[#29303e] '>
                                 zdm
-                                <span className='text-[#c5a47e]'>.</span>
+                                <span className='text-[#34586e]'>.</span>
                                 ofis
                             </a>
-                            {showmenu ? <AiOutlineCloseCircle className='ml-8 text-[#3d3d3d]' fontSize={27} onClick={() => { setshowmenu(false) }} /> : null}
+                            {showmenu ? <AiOutlineCloseCircle className='ml-8 text-[#29303e]' fontSize={27} onClick={() => { setshowmenu(false) }} /> : null}
                         </div >
-                        <ul className='hidden lg:flex flex-row justify-center uppercase items-center font-Common tracking-[0.22em] text-[0.77em] leading-[1.65] font-normal text-[#3d3d3d] '>
-                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => { history.push('/') }}>ANA SAYFA</a> <div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => { history.push('/AboutUs') }} >BİZ KİMİZ?</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => { history.push('/Projects') }}>PROJELERİMİZ</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => { history.push('/Products') }}>ÜRÜNLERİMİZ</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => { history.push('/Contacts') }}>İLETİŞİM</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
+                        <ul className='hidden lg:flex flex-row justify-center uppercase items-center font-Common tracking-[0.22em] text-[0.77em] leading-[1.65] font-normal text-[#29303e] '>
+                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => { history.push('/') }}>ANA SAYFA</a> <div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => { history.push('/AboutUs') }} >BİZ KİMİZ?</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => { history.push('/Projects') }}>PROJELERİMİZ</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => { history.push('/Products') }}>ÜRÜNLERİMİZ</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                            <li className="mx-8 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => { history.push('/Contacts') }}>İLETİŞİM</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
                         </ul>
                         {!showmenu ?
                             <div className='visible lg:hidden'>
-                                <GiHamburgerMenu className='text-[#3d3d3d]' fontSize={27} onClick={() => { setshowmenu(true) }} />
+                                <GiHamburgerMenu className='text-[#29303e]' fontSize={27} onClick={() => { setshowmenu(true) }} />
                             </div>
                             : null}
                         {showmenu ?
@@ -61,27 +61,27 @@ export function Header({ history }) {
                                 initial={{ y: 100 }}
                                 animate={{ y: 0 }}
                                 transition={{ duration: 1.2 }}
-                                className='w-full flex flex-col justify-between uppercase items-center font-Common tracking-[0.22em] text-[0.77em] leading-[1.65] font-normal text-[#3d3d3d] '>
-                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => {
+                                className='w-full flex flex-col justify-between uppercase items-center font-Common tracking-[0.22em] text-[0.77em] leading-[1.65] font-normal text-[#29303e] '>
+                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => {
                                     setshowmenu(false)
                                     history.push('/')
-                                }}>ANA SAYFA</a> <div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => {
+                                }}>ANA SAYFA</a> <div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => {
                                     setshowmenu(false)
                                     history.push('/AboutUs')
-                                }} >BİZ KİMİZ?</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => {
+                                }} >BİZ KİMİZ?</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => {
                                     setshowmenu(false)
                                     history.push('/Projects')
-                                }}>PROJELERİMİZ</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => {
+                                }}>PROJELERİMİZ</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => {
                                     setshowmenu(false)
                                     history.push('/Products')
-                                }}>ÜRÜNLERİMİZ</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
-                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#c5a47e]' onClick={() => {
+                                }}>ÜRÜNLERİMİZ</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
+                                <li className="my-4 flex flex-col group"><a className='cursor-pointer group-hover:text-[#34586e]' onClick={() => {
                                     setshowmenu(false)
                                     history.push('/Contacts')
-                                }}>İLETİŞİM</a><div className='bg-[#c5a47e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#c5a47e]' /></li>
+                                }}>İLETİŞİM</a><div className='bg-[#34586e] group-hover:w-[100%] w-[0px] group-hover:border-[1px] transition-all ease-in-out duration-300 border-[#34586e]' /></li>
                             </motion.ul>
                             : null}
                     </motion.nav >

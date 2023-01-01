@@ -71,7 +71,7 @@ export function Projects({ history }) {
 
   return (
     <div className='w-[100%]  mx-auto flex flex-col justify-center items-center '>
-      <h1 className='text-[1.0875em] lg:text-[1.6875em]  mx-auto lg:w-1/3 text-center lg:whitespace-nowrap mt-12 font-Common tracking-[0.32em] text-[#3d3d3d] font-semibold'>YAPTIĞIMIZ <span className='text-[#c5a47e]'>PROJELERİMİZ</span></h1>
+      <h1 className='text-[1.0875em] lg:text-[1.6875em]  mx-auto lg:w-1/3 text-center lg:whitespace-nowrap mt-12 font-Common tracking-[0.32em] text-[#29303e] font-semibold'>YAPTIĞIMIZ <span className='text-[#34586e]'>PROJELERİMİZ</span></h1>
       <div className='hidden lg:block mt-20 w-[100%]'>
         <Slider  {...settings}>
           {slideritems.map(item => {
@@ -81,7 +81,7 @@ export function Projects({ history }) {
                 <img className="group-hover:scale-125 transition-all ease-in-out duration-[2000ms]" src={item.img} alt={item.title} />
               </div>
               <p className='-rotate-90 absolute bottom-0 left-0 mb-40 -ml-24 text-[10px]  font-bold whitespace-nowrap uppercase tracking-[1em] lg:tracking-[2vmin] opacity-1 group-hover:opacity-0 transition-all ease-in-out duration-1000 text-[#fff] '>ZDM OFİS</p>
-              <div style={{ transform: 'translate(-50%,-50%)' }} className='absolute left-[50%] top-[50%] transition-all ease-in-out duration-1000 text-[0.4vmin] p-2 group-hover:text-[5vmin] cursor-pointer group-hover:opacity-50 rounded-full hover:bg-[#d99b54] bg-[#c5a47e] opacity-0'
+              <div style={{ transform: 'translate(-50%,-50%)' }} className='absolute left-[50%] top-[50%] transition-all ease-in-out duration-1000 text-[0.4vmin] p-2 group-hover:text-[5vmin] cursor-pointer group-hover:opacity-50 rounded-full hover:bg-[#3b535a] bg-[#34586e] opacity-0'
                 onClick={() => { history.push("/Project/" + item.Id) }}
               >
                 <FaSearchMinus className='m-2 text-[#fff] group-hover:opacity-1' icon={faMagnifyingGlassPlus} />
@@ -99,7 +99,7 @@ export function Projects({ history }) {
                 <img className="group-hover:scale-125 transition-all ease-in-out duration-[2000ms]" src={item.img} alt={item.title} />
               </div>
               <p className='-rotate-90 absolute bottom-0 left-0 mb-40 -ml-24 text-[10px]  font-bold whitespace-nowrap uppercase tracking-[1em] lg:tracking-[2vmin] opacity-1 group-hover:opacity-0 transition-all ease-in-out duration-1000 text-[#fff] '>ZDM OFİS</p>
-              <div style={{ transform: 'translate(-50%,-50%)' }} className='absolute left-[50%] top-[50%] transition-all ease-in-out duration-1000 text-[0.4vmin] p-2 group-hover:text-[5vmin] cursor-pointer group-hover:opacity-50 rounded-full hover:bg-[#d99b54] bg-[#c5a47e] opacity-0'
+              <div style={{ transform: 'translate(-50%,-50%)' }} className='absolute left-[50%] top-[50%] transition-all ease-in-out duration-1000 text-[0.4vmin] p-2 group-hover:text-[5vmin] cursor-pointer group-hover:opacity-50 rounded-full hover:bg-[#d99b54] bg-[#34586e] opacity-0'
                 onClick={() => { history.push("/Project/" + item.Id) }}
               >
                 <FaSearchMinus className='m-2 text-[#fff] group-hover:opacity-1' icon={faMagnifyingGlassPlus} />
@@ -117,7 +117,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className='flex flex-row flex-nowrap justify-center items-center hover:text-[#c5a47e] text-[#c5c4c2] transition-all ease-in-out duration-300 cursor-pointer'
+      className='flex flex-row flex-nowrap justify-center items-center hover:text-[#34586e] text-[#c5c4c2] transition-all ease-in-out duration-300 cursor-pointer'
       style={{ position: 'absolute', right: 20, bottom: '50%', zIndex: 2 }}
       onClick={onClick}
     >
@@ -131,7 +131,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className='flex flex-row flex-nowrap justify-center items-center hover:text-[#c5a47e] text-[#c5c4c2] transition-all ease-in-out duration-300 cursor-pointer'
+      className='flex flex-row flex-nowrap justify-center items-center hover:text-[#34586e] text-[#c5c4c2] transition-all ease-in-out duration-300 cursor-pointer'
       style={{ position: 'absolute', left: 20, bottom: '50%', zIndex: 2 }}
       onClick={onClick}
     >

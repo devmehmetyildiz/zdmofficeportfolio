@@ -82,12 +82,12 @@ export const Products = (props) => {
   return (
     <div className='w-full mt-12 px-[10%] flex flex-col justify-center items-center'>
       <div className='flex my-8 flex-row w-1/5 flex-nowrap justify-center items-center'>
-        <span className='opacity-25 border-y-[0.2px] w-full mx-2 border-[#747474] bg-[#747474]' />
-        <span className='text-[#747474] font-Common'>ÜRÜNLERİMİZ</span>
-        <span className='opacity-25 border-y-[0.2px] w-full mx-2  border-[#747474] bg-[#747474]' />
+        <span className='opacity-25 border-y-[0.2px] w-full mx-2 border-[#3b535a] bg-[#3b535a]' />
+        <span className='text-[#3b535a] font-Common'>ÜRÜNLERİMİZ</span>
+        <span className='opacity-25 border-y-[0.2px] w-full mx-2  border-[#3b535a] bg-[#3b535a]' />
       </div>
       <div className='flex flex-row justify-center w-full items-center text-center flex-wrap'>
-        <div className='flex flex-row flex-nowrap justify-center items-center border-[1px] border-[#747474] rounded-full w-2/3 shadow-xl p-2'>
+        <div className='flex flex-row flex-nowrap justify-center items-center border-[1px] border-[#3b535a] rounded-full w-2/3 shadow-xl p-2'>
           <BsSearch />
           <input onChange={(e) => { setselectedfilter(e.target.value) }} value={selectedfilter} className='w-full text-center outline-0' placeholder='lütfen ürün adı giriniz' >
           </input>
@@ -96,7 +96,7 @@ export const Products = (props) => {
       <div className='mt-4 text-[110%] flex flex-row justify-center items-center text-center flex-wrap  font-Common'>
         {categorieslist.map(item => {
           return <div key={item.uuid}>
-            <div className={`${selectedCategories.uuid === item.uuid ? 'bg-[#c5a47e] text-[#3d3d3d]' : 'text-[#bdbdbd]  bg-[#3d3d3d]'} mx-2 my-2 rounded-full px-4 py-2  cursor-pointer hover:bg-[#c5a47e] hover:text-[#3d3d3d] transition-all ease-in-out duration-300`}
+            <div className={`${selectedCategories.uuid === item.uuid ? 'bg-[#34586e] text-[#29303e]' : 'text-[#bdbdbd]  bg-[#29303e]'} mx-2 my-2 rounded-full px-4 py-2  cursor-pointer hover:bg-[#34586e] hover:text-[#29303e] transition-all ease-in-out duration-300`}
               onClick={() => { Setcategories(item) }}
             >
               <h1 >{item.name}</h1>
@@ -107,7 +107,7 @@ export const Products = (props) => {
       <div className='mt-4 text-[100%] flex flex-row justify-center items-center text-center flex-wrap  font-Common'>
         {selectedCategories && Object.keys(selectedCategories).length > 0 ? subcategorieslist.filter(u => u.categoryuui === selectedCategories.uuid).map(item => {
           return <div key={item.uuid}>
-            < div className={`${selectedSubcategories.uuid === item.uuid ? 'bg-[#c5a47e] text-[#3d3d3d]' : 'text-[#bdbdbd]  bg-[#3d3d3d]'} mx-2 my-2 rounded-full px-4 py-2  cursor-pointer hover:bg-[#c5a47e] hover:text-[#3d3d3d] transition-all ease-in-out duration-300`}
+            < div className={`${selectedSubcategories.uuid === item.uuid ? 'bg-[#34586e] text-[#29303e]' : 'text-[#bdbdbd]  bg-[#29303e]'} mx-2 my-2 rounded-full px-4 py-2  cursor-pointer hover:bg-[#34586e] hover:text-[#29303e] transition-all ease-in-out duration-300`}
               onClick={() => { Setsubcategories(item) }}
             >
               <h1 >{item.name}</h1>
@@ -124,8 +124,8 @@ export const Products = (props) => {
               history.push(`/Products/${item.uuid}`)
             }}
             key={item.uuid} className='cursor-pointer overflow-hidden flex flex-col  justify-start items-center  group  shadow-xl relative  h-[500px]' >
-            <div className='transition-all ease-in-out duration-700  text-center text-[150%] align-top py-4 text-[#bdbdbd] bg-[#3d3d3d] group-hover:bg-[#c5a47e] w-full'>
-              <p className='transition-all ease-in-out duration-700  group-hover:text-[#3d3d3d] font-bold'> {item.name}</p>
+            <div className='transition-all ease-in-out duration-700  text-center text-[150%] align-top py-4 text-[#bdbdbd] bg-[#29303e] group-hover:bg-[#34586e] w-full'>
+              <p className='transition-all ease-in-out duration-700  group-hover:text-[#29303e] font-bold'> {item.name}</p>
             </div>
             <div className='w-full h-full flex justify-center items-center'>
               <img
@@ -137,8 +137,8 @@ export const Products = (props) => {
       </div>
       <div className='mt-4 font-bold flex flex-row flex-nowrap justify-start items-start mx-auto text-[150%]'>
         {numbers.map(item => {
-          return <div key={item} onClick={() => { setSelectedpageindex(item) }} className={`${item === selectedpageindex ? `bg-[#c5a47e]` : `bg-[#3d3d3d]`} mx-2 p-4 cursor-pointer`}>
-            <span className={`${item === selectedpageindex ? `text-[#3d3d3d]` : `text-[#bdbdbd]`}`}>{item}</span>
+          return <div key={item} onClick={() => { setSelectedpageindex(item) }} className={`${item === selectedpageindex ? `bg-[#34586e]` : `bg-[#29303e]`} mx-2 p-4 cursor-pointer`}>
+            <span className={`${item === selectedpageindex ? `text-[#29303e]` : `text-[#bdbdbd]`}`}>{item}</span>
           </div>
         })}
       </div>

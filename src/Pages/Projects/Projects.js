@@ -58,7 +58,7 @@ export function Projects({ history }) {
             <img className="group-hover:scale-125 transition-all ease-in-out duration-[2000ms]" src={item.img} alt={item.title} />
           </div>
           <p className='-rotate-90 absolute bottom-0 left-0 mb-40 -ml-24 text-[10px]  font-bold whitespace-nowrap uppercase tracking-[1em] lg:tracking-[2vmin] opacity-1 group-hover:opacity-0 transition-all ease-in-out duration-1000 text-[#fff] '>ZDM OFFICE</p>
-          <div className='absolute bottom-[41%] left-[50%] transition-all ease-in-out duration-1000 -translate-y-1/2 -translate-x-1/2 p-4 group-hover:p-8 cursor-pointer group-hover:opacity-50 rounded-full hover:bg-[#d99b54] bg-[#c5a47e] opacity-0'
+          <div className='absolute bottom-[41%] left-[50%] transition-all ease-in-out duration-1000 -translate-y-1/2 -translate-x-1/2 p-4 group-hover:p-8 cursor-pointer group-hover:opacity-50 rounded-full hover:bg-[#3b535a] bg-[#34586e] opacity-0'
             onClick={() => {
               //console.log("geldim")
              // history.push("/Projects/" + item.Id)

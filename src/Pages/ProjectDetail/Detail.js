@@ -83,7 +83,7 @@ export function Detail({ match, history }) {
     return (
         <div className='w-full mt-12 px-[10%] relative'>
             <div className='absolute z-100 left-[20vmin] top-[40%]'>
-                <div className='w-[50%]  bg-[#c5a47e] flex flex-col justify-center items-start p-4 lg:p-20'>
+                <div className='w-[50%]  bg-[#34586e] flex flex-col justify-center items-start p-4 lg:p-20'>
                     <h2 className='font-bold font-Common text-[3.5vmin]  leading-[1.5] uppercase text-[#fff]'>{Renderitem.title}#{ID}</h2>
                     <div className=' flex flex-col lg:flex-row justify-center lg:justify-between w-full items-start lg:items-center'>
                         <h2 className='font-bold font-Common text-[3.5vmin] leading-[1.5] uppercase text-[#fff] lg:my-4'>Client : {Renderitem.client}</h2>

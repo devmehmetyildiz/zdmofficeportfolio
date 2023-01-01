@@ -4,7 +4,7 @@
 
 @layer components {
   .navbar-a {
-    @apply ml-4 text-[0.81em] font-Common font-light tracking-[0.32em] uppercase hover:text-[#c5a47e] cursor-pointer;
+    @apply ml-4 text-[0.81em] font-Common font-light tracking-[0.32em] uppercase hover:text-[#34586e] cursor-pointer;
   }
 }
 
