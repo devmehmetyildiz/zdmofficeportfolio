@@ -5,8 +5,9 @@ import { FaMapMarkerAlt } from "react-icons/fa"
 export default function googlemap() {
   return (
     <div className=' w-full flex flex-col lg:flex-row justify-center flex-nowrap items-center'>
+
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.9002317895956!2d36.88460891560783!3d37.58096693105864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ddd582bf9755b%3A0x2551949b2bd17639!2sZDM%20Ofis%20ve%20E%C4%9Fitim%20Mobilyalar%C4%B1!5e0!3m2!1str!2str!4v1667566712526!5m2!1str!2str"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.7416139271993!2d36.836443900601594!3d37.59078476195477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152ddb9f800966d5%3A0x2db018c68ad1c16b!2sZDM%20Ofis%20ve%20E%C4%9Fitim%20Mobilyalar%C4%B1!5e0!3m2!1str!2str!4v1672606281246!5m2!1str!2str"
         width="100%"
         height="500px"
         frameBorder="0"
